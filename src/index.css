@@ -1,5 +1,39 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-}
+  font-family: sans-serif; }
+  body .app-header {
+    text-align: center;
+    background-color: gray;
+    height: 200px;
+    background-image: url("./Assets/banners/banner4.jpg");
+    background-size: cover; }
+    body .app-header .header-menu {
+      position: absolute;
+      width: 100%;
+      top: 10px; }
+      body .app-header .header-menu .header-link {
+        margin: 25px; }
+    body .app-header .wedding-logo {
+      width: 10%; }
+    body .app-header .App-title {
+      font-size: 1.5em;
+      top: 110px;
+      position: absolute;
+      width: 100%; }
+  body .mid-page-banner {
+    width: 100%;
+    min-height: 300px;
+    background-size: cover; }
+    body .mid-page-banner.banner-image-1 {
+      background-image: url("./Assets/banners/banner1.jpg"); }
+    body .mid-page-banner.banner-image-2 {
+      background-image: url("./Assets/banners/banner2.jpg"); }
+    body .mid-page-banner.banner-image-3 {
+      background-image: url("./Assets/banners/banner3.jpg"); }
+    body .mid-page-banner h2 {
+      font-size: 4rem;
+      text-align: center;
+      color: grey;
+      position: relative;
+      top: 90px; }
