@@ -30,6 +30,7 @@ body {
     width: 100%;
     min-height: 300px;
     background-size: cover;
+    background-attachment: fixed;
     &.banner-image-1 {
       background-image: url('./Assets/banners/banner1.jpg');
     }
@@ -39,12 +40,83 @@ body {
     &.banner-image-3 {
       background-image: url('./Assets/banners/banner3.jpg');
     }
+    &.banner-image-5 {
+      background-image: url('./Assets/banners/banner5.png');
+    }
+    &.banner-image-stadhuis {
+      background-image: url('./Assets/banners/gentStadhuis.JPG');
+      h2 {
+        color: black;
+      }
+    }
+    &.banner-image-sintbaafs {
+      background-image: url('./Assets/banners/sintBaafs.JPG');
+      h2 {
+        color: black;
+      }
+    }
     h2 {
       font-size: 4rem;
       text-align: center;
       color: grey;
       position: relative;
       top:90px;
+    }
+  }
+  .location-div {
+    text-align: center;
+    font-size: 1.2rem;
+    b{
+      font-size: 1.3rem;
+    }
+  }
+  .text-div {
+    margin: 20px;
+  }
+  .href-simple {
+    text-decoration: none;
+    color: black;
+  }
+  .gifts-wrapper {
+    margin: 100px;
+    .gift-div {
+      display: inline-block;
+      height: 200px;
+      width: 200px;
+      margin: 50px;
+      border-radius: 15px;
+      overflow:hidden;
+      .gifts-description {
+        z-index: -1;
+        top: -134px;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        margin: 15px;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        opacity: 0.9;
+      }
+      img:hover {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    .mid-page-banner {
+      h2 {
+        font-size: 4rem;
+        color: grey;
+        top:50px;
+      }
+    }
+    .text-div {
+      margin: 10px;
     }
   }
 }
