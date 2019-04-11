@@ -9,7 +9,7 @@ class Header extends Component {
         <Link to='/Home'>
           <img src={logo} className="wedding-logo" alt="logo" />
         </Link>
-        <h1 className="App-title">Jeroen en Eva - 15/06/19</h1>
+        <h1 className="App-title"></h1>
         <div className="header-menu">
           <Link className='header-link' to='/Home'>
             Wat

@@ -2,6 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  form {
+    label {
+      font-weight: bold;
+    }
+  }
   .app-header {
     text-align: center;
     background-color: gray;
