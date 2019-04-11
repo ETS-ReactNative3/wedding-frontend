@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Header from '../Components/Header'
 
+require('dotenv').config()
+
 class Rsvp extends Component {
   constructor(props) {
+    console.log(process.env.API_HOST)
     super(props)
     this.state = {
       name:'',
