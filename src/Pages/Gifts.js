@@ -18,10 +18,10 @@ class Gifts extends Component {
           Cadeau's geven is daarom ook totaal niet nodig. Wil je toch een cadeau geven, willen we vriendelijk vragen om ons dan gewoon de monetaire waarde van je cadeau te storten. Hieronder volgt een lijstje trouwgerelateerde uitgaven, waar je ons mee zou helpen.
         </div>
         <div className='gifts-wrapper'>
-          <div className='gift-div'><img src={weddingDress} /><span className='gift-description'>Een betoverende trouwjurk.</span></div>
-          <div className='gift-div'><img src={food} /><span className='gift-description'>Een heerlijke maaltijd om met onze vrienden en familie te delen.</span></div>
-          <div className='gift-div'><img src={weddingParty} /><span className='gift-description'>Het feest van ons leven om de dag van ons leven te vieren.</span></div>
-          <div className='gift-div'><img src={airplanes} /><span className='gift-description'>Een huwelijks.</span></div>
+          <div className='gift-div'><img className='gift-img' src={weddingDress} /><span className='gift-description'>Een trouwjurk uit de sprookjes.</span></div>
+          <div className='gift-div'><img className='gift-img' src={food} /><span className='gift-description'>Een heerlijke maaltijd om met onze vrienden en familie te delen.</span></div>
+          <div className='gift-div'><img className='gift-img' src={weddingParty} /><span className='gift-description'>Het feest van ons leven om de dag van ons leven te vieren.</span></div>
+          <div className='gift-div'><img className='gift-img' src={airplanes} /><span className='gift-description'>Een huwelijksreis.</span></div>
         </div>
       </div>
     )

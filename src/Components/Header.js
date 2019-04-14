@@ -14,10 +14,13 @@ class Header extends Component {
           <Link className='header-link' to='/Home'>
             Wat
           </Link>
-          <Link className='header-link' to='/What'>
-            Waar en wanneer
+          <Link className='header-link' to='/Where'>
+            Waar
           </Link>
           <Link className='header-link' to='/Gifts'>
+            Gifts
+          </Link>
+          <Link className='header-link' to='/RSVP'>
             Gifts
           </Link>
         </div>

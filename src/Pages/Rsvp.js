@@ -6,9 +6,10 @@ require('dotenv').config()
 
 class Rsvp extends Component {
   constructor(props) {
-    console.log(process.env.API_HOST)
     super(props)
+    const API_HOST = process.env.REACT_APP_API_HOST || 'https://jeroeneneva.herokuapp.com/'
     this.state = {
+      API_HOST,
       name:'',
       nameSubmitted: '',
       error: '',
@@ -29,7 +30,7 @@ class Rsvp extends Component {
     let errorResponse = false
     let guest = false
 
-    await axios.post('http://wedding.test/api/guests/checkGuest', {
+    await axios.post(this.state.API_HOST+'/api/guests/checkGuest', {
       name: this.state.name
     })
     .then(function(response) {
@@ -76,7 +77,7 @@ class Rsvp extends Component {
       songs
     }
     
-    axios.post('http://wedding.test/api/guests/rsvp', rsvpObj)
+    axios.post(this.state.API_HOST+'/api/guests/rsvp', rsvpObj)
     .then(function(response) {
       console.log(response)
       alert('Opgeslaan!')
@@ -135,7 +136,7 @@ class Rsvp extends Component {
 
           <form onSubmit={this.checkGuest.bind(this)}>
             <label>
-              Name: {this.state.error} <br />
+              Naam: (voornaam SPATIE achternaam) {this.state.error} <br />
               <input type="text" name="Naam" value={this.state.name} onChange={this.changeName.bind(this)}/>
             </label>
             <br /><input type="submit" value="Opslaan" />
@@ -169,7 +170,8 @@ class Rsvp extends Component {
                 Ik wil er graag bij zijn:
               </label>
               <input type='checkbox' name='plus1attending' checked={this.state.guest.plus1attending || false} onChange={this.handleGuestChange.bind(this)} /> <br />
-              <label>
+              </div> : ''}
+            {this.state.guest.plus1 && this.state.guest.diner ? <div><br /><label>
                 Ik wil graag vegetarisch eten:
               </label>
               <input type='checkbox' name='plus1veggie' checked={this.state.guest.plus1veggie || false} onChange={this.handleGuestChange.bind(this)} /> <br />

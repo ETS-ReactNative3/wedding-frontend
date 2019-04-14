@@ -6,6 +6,7 @@ class Header extends Component {
     return (
         <div className={cssClass}>
           <h2>{this.props.title}</h2>
+          {this.props.subtitle? <h3>{this.props.subtitle}</h3>: ''}
         </div>
     )
   }

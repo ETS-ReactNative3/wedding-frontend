@@ -37,33 +37,39 @@ body {
     background-size: cover;
     background-attachment: fixed;
     &.banner-image-1 {
-      background-image: url('./Assets/banners/banner1.jpg');
+      background-image: url('./Assets/banners/fireworksBg.jpg');
     }
     &.banner-image-2 {
-      background-image: url('./Assets/banners/banner2.jpg');
+      background-image: url('./Assets/banners/friends.jpg');
     }
     &.banner-image-3 {
       background-image: url('./Assets/banners/banner3.jpg');
     }
+    &.banner-image-4 {
+      background-attachment: scroll;
+      background-image: url('./Assets/banners/ring.png');
+    }
     &.banner-image-5 {
-      background-image: url('./Assets/banners/banner5.png');
+      background-attachment: scroll;
+      background-image: url('./Assets/banners/weddingCake.jpg');
     }
     &.banner-image-stadhuis {
       background-image: url('./Assets/banners/gentStadhuis.JPG');
-      h2 {
-        color: black;
-      }
     }
     &.banner-image-sintbaafs {
       background-image: url('./Assets/banners/sintBaafs.JPG');
-      h2 {
-        color: black;
-      }
     }
     h2 {
       font-size: 4rem;
       text-align: center;
-      color: grey;
+      color: white;
+      position: relative;
+      top:30px;
+    }
+    h3 {
+      font-size: 3rem;
+      text-align: center;
+      color: #b93d51;
       position: relative;
       top:90px;
     }
@@ -71,41 +77,45 @@ body {
   .location-div {
     text-align: center;
     font-size: 1.2rem;
+    margin-bottom: 50px;
     b{
       font-size: 1.3rem;
     }
+    .direction-click {
+      font-size: 0.8rem;
+    }
   }
   .text-div {
-    margin: 20px;
+    margin: 20px 150px;
+    font-size: 1.2rem;
   }
   .href-simple {
     text-decoration: none;
     color: black;
   }
   .gifts-wrapper {
-    margin: 100px;
+    margin: 10%;
     .gift-div {
       display: inline-block;
-      height: 200px;
-      width: 200px;
+      height: 150px;
+      width: 150px;
       margin: 50px;
-      border-radius: 15px;
       overflow:hidden;
-      .gifts-description {
+      .gift-img {
+        height: 150px;
+        width: 150px;
+        border-radius: 20px;
+      }
+      .gift-img:hover {
+        opacity: 0.3;
+      }
+      .gift-description {
         z-index: -1;
         top: -134px;
         position: relative;
         display: inline-block;
         text-align: center;
         margin: 15px;
-      }
-      img {
-        height: 100%;
-        width: 100%;
-        opacity: 0.9;
-      }
-      img:hover {
-        opacity: 0.3;
       }
     }
   }

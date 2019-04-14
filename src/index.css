@@ -29,59 +29,68 @@ body {
     background-size: cover;
     background-attachment: fixed; }
     body .mid-page-banner.banner-image-1 {
-      background-image: url("./Assets/banners/banner1.jpg"); }
+      background-image: url("./Assets/banners/fireworksBg.jpg"); }
     body .mid-page-banner.banner-image-2 {
-      background-image: url("./Assets/banners/banner2.jpg"); }
+      background-image: url("./Assets/banners/friends.jpg"); }
     body .mid-page-banner.banner-image-3 {
       background-image: url("./Assets/banners/banner3.jpg"); }
+    body .mid-page-banner.banner-image-4 {
+      background-attachment: scroll;
+      background-image: url("./Assets/banners/ring.png"); }
     body .mid-page-banner.banner-image-5 {
-      background-image: url("./Assets/banners/banner5.png"); }
+      background-attachment: scroll;
+      background-image: url("./Assets/banners/weddingCake.jpg"); }
     body .mid-page-banner.banner-image-stadhuis {
       background-image: url("./Assets/banners/gentStadhuis.JPG"); }
-      body .mid-page-banner.banner-image-stadhuis h2 {
-        color: black; }
     body .mid-page-banner.banner-image-sintbaafs {
       background-image: url("./Assets/banners/sintBaafs.JPG"); }
-      body .mid-page-banner.banner-image-sintbaafs h2 {
-        color: black; }
     body .mid-page-banner h2 {
       font-size: 4rem;
       text-align: center;
-      color: grey;
+      color: white;
+      position: relative;
+      top: 30px; }
+    body .mid-page-banner h3 {
+      font-size: 3rem;
+      text-align: center;
+      color: #b93d51;
       position: relative;
       top: 90px; }
   body .location-div {
     text-align: center;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    margin-bottom: 50px; }
     body .location-div b {
       font-size: 1.3rem; }
+    body .location-div .direction-click {
+      font-size: 0.8rem; }
   body .text-div {
-    margin: 20px; }
+    margin: 20px 150px;
+    font-size: 1.2rem; }
   body .href-simple {
     text-decoration: none;
     color: black; }
   body .gifts-wrapper {
-    margin: 100px; }
+    margin: 10%; }
     body .gifts-wrapper .gift-div {
       display: inline-block;
-      height: 200px;
-      width: 200px;
+      height: 150px;
+      width: 150px;
       margin: 50px;
-      border-radius: 15px;
       overflow: hidden; }
-      body .gifts-wrapper .gift-div .gifts-description {
+      body .gifts-wrapper .gift-div .gift-img {
+        height: 150px;
+        width: 150px;
+        border-radius: 20px; }
+      body .gifts-wrapper .gift-div .gift-img:hover {
+        opacity: 0.3; }
+      body .gifts-wrapper .gift-div .gift-description {
         z-index: -1;
         top: -134px;
         position: relative;
         display: inline-block;
         text-align: center;
         margin: 15px; }
-      body .gifts-wrapper .gift-div img {
-        height: 100%;
-        width: 100%;
-        opacity: 0.9; }
-      body .gifts-wrapper .gift-div img:hover {
-        opacity: 0.3; }
 
 @media only screen and (max-width: 600px) {
   body .mid-page-banner h2 {

@@ -17,6 +17,7 @@ class What extends Component {
           11:00<br />
           <b>Botermarkt 1</b><br />
           9000 Gent
+          <div className='direction-click'>(Klik hier voor een routebeschrijving)</div> <br />
         </div></a>
         <Banner image={'sintbaafs'} title='15/06/2016 - Kerkelijk' />
         <a href={sintbaafsMaps} className='href-simple'><div className='location-div'>
@@ -24,6 +25,7 @@ class What extends Component {
           11:00<br />
           <b>Gistelsesteenweg</b><br />
           8200 Brugge
+          <div className='direction-click'>(Klik hier voor een routebeschrijving)</div> <br />
         </div></a>
         <Banner image={5} title='15/06/2016 - Feest!' />
         <a href={thofMaps} className='href-simple'><div className='location-div'>
@@ -31,6 +33,7 @@ class What extends Component {
           11:00<br />
           <b>Peerstalstraat 29</b><br />
           8750 Wingene
+          <div className='direction-click'>(Klik hier voor een routebeschrijving)</div> <br />
         </div></a>
       </div>
     )
