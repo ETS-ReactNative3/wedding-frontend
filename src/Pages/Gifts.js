@@ -12,7 +12,7 @@ class Gifts extends Component {
       <div className="App">
         <Header />
         <div className='text-div'>
-          Zoals jullie al weten, wonen wij ondertussen al bijna 2 jaar samen. In ons huis hebben wij alles waar we gelukkig van worden. (Vooral Magnusje, natuurlijk.)
+          Zoals jullie al weten, wonen wij ondertussen al meer dan 2 jaar samen. In ons huis hebben wij alles waar we gelukkig van worden. (Vooral Magnusje, natuurlijk.)
         </div>
         <div className='text-div'>
           Cadeau's geven is daarom ook totaal niet nodig. Wil je toch een cadeau geven, willen we vriendelijk vragen om ons dan gewoon de monetaire waarde van je cadeau te storten. Hieronder volgt een lijstje trouwgerelateerde uitgaven, waar je ons mee zou helpen.
