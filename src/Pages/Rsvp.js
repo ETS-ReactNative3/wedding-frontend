@@ -141,7 +141,7 @@ class Rsvp extends Component {
             </label>
             <br /><input type="submit" value="Opslaan" />
           </form>
-          <div className='something-wrong'>(*Neem gerust met ons contact op als er iets niet lukt of klopt met het formulier.)</div>
+          <div className='something-wrong'>(*Neem gerust met ons contact op als er iets niet lukt of klopt met het formulier. Het ophalen van uw gegevens kan even duren.)</div>
         </div>
       )
     }
