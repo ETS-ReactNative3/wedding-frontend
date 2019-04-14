@@ -132,7 +132,7 @@ class Rsvp extends Component {
       return (
         <div className="App">
           <Header />
-          RSVP
+          <h1 className='rsvp-h1'>RSVP</h1>
 
           <form onSubmit={this.checkGuest.bind(this)}>
             <label>
@@ -141,6 +141,7 @@ class Rsvp extends Component {
             </label>
             <br /><input type="submit" value="Opslaan" />
           </form>
+          <div className='something-wrong'>(*Neem gerust met ons contact op als er iets niet lukt of klopt met het formulier.)</div>
         </div>
       )
     }
@@ -148,7 +149,7 @@ class Rsvp extends Component {
       return (
         <div className="App">
           <Header />
-          RSVP
+          <h1 className='rsvp-h1'>RSVP</h1>
 
           <form  onSubmit={this.submitRsvp.bind(this)}>
             <label>
@@ -187,6 +188,7 @@ class Rsvp extends Component {
             </div> : ''}
             <input type="submit" value="Opslaan" />
           </form>
+          <div className='something-wrong'>(*Neem gerust met ons contact op als er iets niet lukt of klopt met het formulier.)</div>
         </div>
       )
     }

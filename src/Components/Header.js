@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <header className="app-header">
         <Link to='/Home'>
-          <img src={logo} className="wedding-logo" alt="logo" />
+          <div className='logo-wrapper'><img src={logo} className="wedding-logo" alt="logo" /></div>
         </Link>
         <h1 className="App-title"></h1>
         <div className="header-menu">
@@ -18,7 +18,7 @@ class Header extends Component {
             Waar
           </Link>
           <Link className='header-link' to='/Gifts'>
-            Gifts
+            Cadeaus
           </Link>
           <Link className='header-link' to='/RSVP'>
             Kan je erbij zijn?

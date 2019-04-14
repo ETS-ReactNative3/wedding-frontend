@@ -11,7 +11,7 @@ class What extends Component {
     return (
       <div className="App">
         <Header />
-        <Banner image={'stadhuis'} title="14/06/2016 - Wettelijk" />
+        <Banner image={'stadhuis'} title="14/06/2019 - Wettelijk" />
         <a href={stadhuisMaps} className='href-simple'><div className='location-div'>
           <b>Stadhuis Gent</b><br />
           11:00<br />
@@ -19,7 +19,7 @@ class What extends Component {
           9000 Gent
           <div className='direction-click'>(Klik hier voor een routebeschrijving)</div> <br />
         </div></a>
-        <Banner image={'sintbaafs'} title='15/06/2016 - Kerkelijk' />
+        <Banner image={'sintbaafs'} title='15/06/2019 - Kerkelijk' />
         <a href={sintbaafsMaps} className='href-simple'><div className='location-div'>
           <b>Sint-Baafs Sint-Andries</b><br />
           11:00<br />
@@ -27,7 +27,7 @@ class What extends Component {
           8200 Brugge
           <div className='direction-click'>(Klik hier voor een routebeschrijving)</div> <br />
         </div></a>
-        <Banner image={5} title='15/06/2016 - Feest!' />
+        <Banner image={5} title='15/06/2019 - Feest!' />
         <a href={thofMaps} className='href-simple'><div className='location-div'>
           <b>Feestzaal 't Of</b><br />
           11:00<br />

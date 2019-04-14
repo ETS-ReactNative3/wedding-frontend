@@ -2,22 +2,41 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif; }
-  body form label {
-    font-weight: bold; }
+  body form {
+    margin: 0 20px; }
+    body form label {
+      font-weight: bold; }
   body .app-header {
     text-align: center;
     background-color: gray;
     height: 200px;
-    background-image: url("./Assets/banners/banner4.jpg");
+    background-image: url("./Assets/banners/graduation.jpg");
     background-size: cover; }
     body .app-header .header-menu {
       position: absolute;
       width: 100%;
       top: 10px; }
       body .app-header .header-menu .header-link {
-        margin: 25px; }
-    body .app-header .wedding-logo {
-      width: 10%; }
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px 15px;
+        margin: 15px;
+        top: 5px;
+        position: relative;
+        border-radius: 10px; }
+    body .app-header .logo-wrapper {
+      background: rgba(255, 255, 255, 0.8);
+      height: 120px;
+      width: 148px;
+      border-radius: 80px;
+      position: relative;
+      top: 50px;
+      left: 25px; }
+      body .app-header .logo-wrapper .wedding-logo {
+        height: 210px;
+        width: 150px;
+        top: -35px;
+        left: -3px;
+        position: relative; }
     body .app-header .App-title {
       font-size: 1.5em;
       top: 110px;
@@ -56,6 +75,11 @@ body {
       color: #b93d51;
       position: relative;
       top: 90px; }
+  body .something-wrong {
+    font-size: 0.8rem;
+    margin: 20px; }
+  body .rsvp-h1 {
+    margin: 20px 45px; }
   body .location-div {
     text-align: center;
     font-size: 1.2rem;
