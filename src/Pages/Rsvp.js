@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Header from '../Components/Header'
 
+import loading from '../Assets/loading.gif'
+
 require('dotenv').config()
 
 class Rsvp extends Component {
@@ -20,12 +22,16 @@ class Rsvp extends Component {
         rsvp: false,
       },
       songs: ['', '', ''],
-      artists: ['', '', '']
+      artists: ['', '', ''],
+      loading: false
     }
   }
 
   checkGuest = async function(event) {
     event.preventDefault()
+    this.setState({
+      loading: true
+    })
 
     let errorResponse = false
     let guest = false
@@ -34,7 +40,6 @@ class Rsvp extends Component {
       name: this.state.name
     })
     .then(function(response) {
-      console.log('guest', response.data)
       guest = response.data
     })
     .catch(function(error) {
@@ -44,19 +49,23 @@ class Rsvp extends Component {
     if (guest) {
       this.setState({
         nameSubmitted: guest.name,
-        guest: guest
+        guest: guest,
+        loading: false
       })
     }
     else if (errorResponse) {
       this.setState({
-        error: errorResponse
+        error: errorResponse,
+        loading: false
       })
     }
-    console.log(this.state)
   }
 
   submitRsvp = async function(event) {
     event.preventDefault()
+    this.setState({
+      loading: true,
+    })
     const guest = this.state.guest
     const artists = this.state.artists
     let songs = []
@@ -79,12 +88,13 @@ class Rsvp extends Component {
     
     axios.post(this.state.API_HOST+'/api/guests/rsvp', rsvpObj)
     .then(function(response) {
-      console.log(response)
       alert('Opgeslaan!')
     })
     .catch(function(err) {
-      console.log('error', err)
       alert('er is iets mis gegaan, probeer aub later opnieuw. Indien dit blijft gebeuren, neem dan contact op met ons.')
+    })
+    this.setState({
+      loading: false,
     })
   }
 
@@ -96,16 +106,17 @@ class Rsvp extends Component {
 
   handleGuestChange = function(event){
     const target = event.target
-    const value = target.type === 'checkbox' ? target.checked : target.value
-    const name = target.name
-    console.log('changing', name, value)
+    let value = target.type === 'checkbox' ? target.checked : target.value
+    let name = target.name
     let guest = this.state.guest
+    if(name.includes('inverse')) {
+      name = name.split('-')[1]
+      value = value? false : true
+    }
     guest[name] = value
-    console.log('guest', guest)
     this.setState({
       guest
     });
-    console.log('state', this.state)
   }
 
   handleSongChange = function(event){
@@ -139,7 +150,8 @@ class Rsvp extends Component {
               Naam: (voornaam SPATIE achternaam) {this.state.error} <br />
               <input type="text" name="Naam" value={this.state.name} onChange={this.changeName.bind(this)}/>
             </label>
-            <br /><input type="submit" value="Opslaan" />
+            <br /><input type="submit" value="Ophalen" />
+            {this.state.loading? <img src={loading} alt='loading' className='loading-gif' /> : ''}
           </form>
           <div className='something-wrong'>(*Neem gerust met ons contact op als er iets niet lukt of klopt met het formulier. Het ophalen van uw gegevens kan even duren.)</div>
         </div>
@@ -159,6 +171,10 @@ class Rsvp extends Component {
               Ik wil er graag bij zijn:
             </label>
             <input type='checkbox' name='rsvp' checked={this.state.guest.rsvp || false} onChange={this.handleGuestChange.bind(this)} /> <br />
+            <label>
+              Ik kan er spijtig genoeg niet bij zijn:
+            </label>
+            <input type='checkbox' name='inverse-rsvp' checked={this.state.guest.rsvp? false : true} onChange={this.handleGuestChange.bind(this)} /> <br />
             {this.state.guest.diner ? <div>
               <label>
                 Ik wil graag vegetarisch eten:
@@ -171,6 +187,10 @@ class Rsvp extends Component {
                 Ik wil er graag bij zijn:
               </label>
               <input type='checkbox' name='plus1attending' checked={this.state.guest.plus1attending || false} onChange={this.handleGuestChange.bind(this)} /> <br />
+              <label>
+                Ik kan er spijtig genoeg niet bij zijn:
+              </label>
+              <input type='checkbox' name='inverse-plus1attending' checked={this.state.guest.plus1attending? false : true} onChange={this.handleGuestChange.bind(this)} /> <br />
               </div> : ''}
             {this.state.guest.plus1 && this.state.guest.diner ? <div><br /><label>
                 Ik wil graag vegetarisch eten:
@@ -186,6 +206,7 @@ class Rsvp extends Component {
               <input type='text' name='song2' value={this.state.songs[2]} onChange={this.handleSongChange.bind(this)} placeholder='titel'/>
               <input type='text' name='artist2' value={this.state.artists[2]} onChange={this.handleArtistChange.bind(this)} placeholder='artiest'/> <br />
             </div> : ''}
+            {this.state.loading? <img src={loading} alt='loading' className='loading-gif' /> : ''}
             <input type="submit" value="Opslaan" />
           </form>
           <div className='something-wrong'>(*Neem gerust met ons contact op als er iets niet lukt of klopt met het formulier.)</div>

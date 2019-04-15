@@ -51,10 +51,13 @@ body {
     }
   }
   .mid-page-banner {
-    width: 100%;
+    width: 90%;
     min-height: 200px;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+    left: 5%;
+    border-radius: 15px;
     &.banner-image-1 {
       background-image: url('./Assets/banners/fireworksBg.jpg');
     }
@@ -90,7 +93,7 @@ body {
       text-align: center;
       color: #b93d51;
       position: relative;
-      top:90px;
+      top:5px;
     }
   }
   .something-wrong{
