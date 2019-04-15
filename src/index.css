@@ -44,7 +44,7 @@ body {
       width: 100%; }
   body .mid-page-banner {
     width: 100%;
-    min-height: 300px;
+    min-height: 200px;
     background-size: cover;
     background-attachment: fixed; }
     body .mid-page-banner.banner-image-1 {
