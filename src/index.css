@@ -24,11 +24,9 @@ body {
         border-radius: 10px; }
     body .app-header .logo-wrapper {
       height: 120px;
-      width: 148px;
       border-radius: 80px;
       position: relative;
-      top: 50px;
-      left: 25px; }
+      top: 50px; }
       body .app-header .logo-wrapper .wedding-logo {
         height: 210px;
         width: 150px;
@@ -98,18 +96,23 @@ body {
   body .href-simple {
     text-decoration: none;
     color: black; }
+  body h1 {
+    margin: 0 75px; }
   body .gifts-wrapper {
-    margin: 10%; }
+    margin: 0 10%; }
     body .gifts-wrapper .gift-div {
       display: inline-block;
       height: 150px;
-      width: 150px;
-      margin: 50px;
+      width: 200px;
+      margin: 25px;
       overflow: hidden; }
       body .gifts-wrapper .gift-div .gift-img {
         height: 150px;
-        width: 150px;
-        border-radius: 20px; }
+        width: 200px;
+        border-radius: 20px;
+        background: white; }
+        body .gifts-wrapper .gift-div .gift-img.flag-img {
+          width: 200px; }
       body .gifts-wrapper .gift-div .gift-img:hover {
         opacity: 0.3; }
       body .gifts-wrapper .gift-div .gift-description {
