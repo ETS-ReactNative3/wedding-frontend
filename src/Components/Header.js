@@ -21,7 +21,7 @@ class Header extends Component {
             Cadeau's
           </Link>
           <Link className='header-link' to='/RSVP'>
-            Kan je erbij zijn?
+            BEVESTIG HIER
           </Link>
         </div>
       </header>
