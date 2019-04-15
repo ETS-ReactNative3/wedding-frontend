@@ -44,7 +44,7 @@ class Rsvp extends Component {
     })
     .catch(function(error) {
       console.log('err', error)
-      errorResponse = error
+      errorResponse = "Oeps, geen gast met die naam gekend. Controleer je even op spelfouten? Indien het nog steeds niet werkt, neem gerust contact op met ons."
     })
     if (guest) {
       this.setState({
@@ -91,7 +91,7 @@ class Rsvp extends Component {
       alert('Opgeslaan!')
     })
     .catch(function(err) {
-      alert('er is iets mis gegaan, probeer aub later opnieuw. Indien dit blijft gebeuren, neem dan contact op met ons.')
+      alert('Oeps, er is iets mis gegaan, probeer aub later opnieuw. Indien dit blijft gebeuren, neem dan gerust contact op met ons.')
     })
     this.setState({
       loading: false,
@@ -147,7 +147,8 @@ class Rsvp extends Component {
 
           <form onSubmit={this.checkGuest.bind(this)}>
             <label>
-              Naam: (voornaam SPATIE achternaam) {this.state.error} <br />
+              Naam: (voornaam SPATIE achternaam) <br />
+              {this.state.error ? <div className='error-div'>{this.state.error} <br /></div> : ''}
               <input type="text" name="Naam" value={this.state.name} onChange={this.changeName.bind(this)}/>
             </label>
             <br /><input type="submit" value="Ophalen" />

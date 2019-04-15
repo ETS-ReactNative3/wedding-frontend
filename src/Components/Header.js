@@ -12,13 +12,13 @@ class Header extends Component {
         <h1 className="App-title"></h1>
         <div className="header-menu">
           <Link className='header-link' to='/Home'>
-            Wat
+            Jeroen & Eva
           </Link>
           <Link className='header-link' to='/Where'>
-            Waar
+            Waar & Wanneer
           </Link>
           <Link className='header-link' to='/Gifts'>
-            Cadeaus
+            Cadeau's
           </Link>
           <Link className='header-link' to='/RSVP'>
             Kan je erbij zijn?

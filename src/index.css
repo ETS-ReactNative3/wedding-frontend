@@ -6,12 +6,11 @@ body {
     margin: 0 20px; }
     body form label {
       font-weight: bold; }
+      body form label .error-div {
+        color: red; }
   body .app-header {
     text-align: center;
-    background-color: gray;
-    height: 200px;
-    background-image: url("./Assets/banners/graduation.jpg");
-    background-size: cover; }
+    height: 200px; }
     body .app-header .header-menu {
       position: absolute;
       width: 100%;
@@ -24,7 +23,6 @@ body {
         position: relative;
         border-radius: 10px; }
     body .app-header .logo-wrapper {
-      background: rgba(255, 255, 255, 0.8);
       height: 120px;
       width: 148px;
       border-radius: 80px;
@@ -60,8 +58,7 @@ body {
       background-attachment: scroll;
       background-image: url("./Assets/banners/ring.png"); }
     body .mid-page-banner.banner-image-5 {
-      background-attachment: scroll;
-      background-image: url("./Assets/banners/weddingCake.jpg"); }
+      background-image: url("./Assets/banners/tof.jpg"); }
     body .mid-page-banner.banner-image-stadhuis {
       background-image: url("./Assets/banners/gentStadhuis.JPG"); }
     body .mid-page-banner.banner-image-sintbaafs {
@@ -91,6 +88,10 @@ body {
       font-size: 1.3rem; }
     body .location-div .direction-click {
       font-size: 0.8rem; }
+    body .location-div .parking-div {
+      position: relative;
+      top: 5px;
+      margin-bottom: 10px; }
   body .text-div {
     margin: 20px 150px;
     font-size: 1.2rem; }
