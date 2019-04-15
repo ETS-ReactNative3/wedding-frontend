@@ -18,7 +18,7 @@ class Header extends Component {
             Waar & Wanneer
           </Link>
           <Link className='header-link' to='/Gifts'>
-            Cadeau's
+            Cadeaus
           </Link>
           <Link className='header-link' to='/RSVP'>
             BEVESTIG HIER
