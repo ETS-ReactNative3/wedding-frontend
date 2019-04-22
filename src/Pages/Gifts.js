@@ -5,6 +5,8 @@ import takeoff from '../Assets/gifts/takeoff.png'
 import landing from '../Assets/gifts/landing.png'
 import nz from '../Assets/gifts/nz.jpg'
 import vietnam from '../Assets/gifts/vietnam.jpg'
+import nzscene from '../Assets/gifts/newzealandscene.jpg'
+import vietnamscene from '../Assets/gifts/vietnamscene.jpg'
 
 class Gifts extends Component {
   render() {
@@ -26,8 +28,8 @@ class Gifts extends Component {
           <div className='gift-div'><img className='gift-img flag-img' src={vietnam} /><span className='gift-description'>Genieten in Vietnam.</span></div>
           <div className='gift-div'><img className='gift-img' src={landing} /><span className='gift-description'>Een veilige vlucht terug naar huis.</span></div>
           <div className='gift-div'></div>
-          <div className='gift-div'><img className='gift-img flag-img' src={nz} /><span className='gift-description'>10 dagen rondreizen in Nieuw Zeeland.</span></div>
-          <div className='gift-div'><img className='gift-img flag-img' src={vietnam} /><span className='gift-description'>Een weekje genieten in Vietnam.</span></div>
+          <div className='gift-div'><img className='gift-img flag-img' src={nzscene} /><span className='gift-description'>10 dagen rondreizen in Nieuw Zeeland.</span></div>
+          <div className='gift-div'><img className='gift-img flag-img' src={vietnamscene} /><span className='gift-description'>Een weekje genieten in Vietnam.</span></div>
           <div className='gift-div'></div>
         </div>
       </div>
