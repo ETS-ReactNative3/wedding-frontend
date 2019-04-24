@@ -178,7 +178,7 @@ class Rsvp extends Component {
             <input type='checkbox' name='inverse-rsvp' checked={this.state.guest.rsvp? false : true} onChange={this.handleGuestChange.bind(this)} /> <br />
             {this.state.guest.diner ? <div>
               <label>
-                Ik wil graag vegetarisch eten:
+                Ik ben vegetariër:
               </label>
               <input type='checkbox' name='veggie' checked={this.state.guest.veggie || false} onChange={this.handleGuestChange.bind(this)} /> <br />
             </div> : ''}
@@ -193,8 +193,8 @@ class Rsvp extends Component {
               </label>
               <input type='checkbox' name='inverse-plus1attending' checked={this.state.guest.plus1attending? false : true} onChange={this.handleGuestChange.bind(this)} /> <br />
               </div> : ''}
-            {this.state.guest.plus1 && this.state.guest.diner ? <div><br /><label>
-                Ik wil graag vegetarisch eten:
+            {this.state.guest.plus1 && this.state.guest.diner ? <div><label>
+                Ik ben vegetariër:
               </label>
               <input type='checkbox' name='plus1veggie' checked={this.state.guest.plus1veggie || false} onChange={this.handleGuestChange.bind(this)} /> <br />
             </div> : ''}
