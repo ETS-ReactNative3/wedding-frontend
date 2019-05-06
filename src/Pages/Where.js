@@ -23,7 +23,7 @@ class What extends Component {
         <Banner image={'sintbaafs'} title='15/06/2019' />
         <a href={sintbaafsMaps} className='href-simple'><div className='location-div'>
           <b>Sint-Baafskerk Sint-Andries</b><br />
-          11:00<br />
+          14:00<br />
           <b>Gistelsesteenweg</b><br />
           8200 Brugge
           <div className='direction-click'>(Klik hier voor een routebeschrijving)</div> <br />
@@ -31,7 +31,7 @@ class What extends Component {
         <Banner image={5} title='15/06/2019 - Feest!' />
         <a href={thofMaps} className='href-simple'><div className='location-div'>
           <b>Feestzaal 't Of</b><br />
-          11:00<br />
+          16:00<br />
           <b>Peerstalstraat 29</b><br />
           8750 Wingene
           <div className='direction-click'>(Klik hier voor een routebeschrijving)</div> <br />
