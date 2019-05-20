@@ -41,6 +41,7 @@ class Rsvp extends Component {
     })
     .then(function(response) {
       guest = response.data
+      guest.rsvp = guest.RSVP
     })
     .catch(function(error) {
       console.log('err', error)
